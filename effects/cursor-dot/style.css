@@ -1,0 +1,37 @@
+/**
+ * cursor-dot / style.css
+ */
+
+.fx-cursor__dot,
+.fx-cursor__ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  pointer-events: none;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+.fx-cursor__dot.is-on,
+.fx-cursor__ring.is-on { opacity: 1; }
+
+.fx-cursor__dot {
+  width: 6px;
+  height: 6px;
+  background: var(--wf-accent, currentColor);
+}
+
+.fx-cursor__ring {
+  border: 1.5px solid var(--wf-accent, currentColor);
+  opacity: 0;
+  transition: opacity 200ms ease, scale 0s;
+}
+
+.fx-cursor__ring.is-grown { background: color-mix(in srgb, var(--wf-accent, #000) 12%, transparent); }
+
+/* 터치 화면에서는 혹시 떠 있어도 숨깁니다(가드가 있지만 이중 안전). */
+@media (pointer: coarse) {
+  .fx-cursor__dot, .fx-cursor__ring { display: none; }
+}
