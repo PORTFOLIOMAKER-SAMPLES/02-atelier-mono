@@ -37,7 +37,9 @@ export const mount = defineEffect({
     }
 
     const glow = el.ownerDocument.createElement('i');
-    glow.className = 'fx-spotlight__glow';
+    /* fx-layer — 배경 레이어 공용 표식. 다른 팩의 "콘텐츠를 앞으로" 규칙이
+       이 광원을 콘텐츠로 착각해 흐름에 끼워 넣지 않게 합니다. */
+    glow.className = 'fx-spotlight__glow fx-layer';
     glow.setAttribute('aria-hidden', 'true');
     el.appendChild(glow);
     addCleanup(() => glow.remove());

@@ -1,47 +1,41 @@
-# 02 · Atelier Mono — 그래픽 · 편집 디자인
+# Atelier Mono 포트폴리오
 
-> **[Portfolio Maker](https://portfoliomaker.site)** 로 만든 견본 포트폴리오입니다.
-> 코드 한 줄 쓰지 않고, 브라우저에서 클릭과 입력만으로 만들었습니다.
+Portfolio Maker로 만든 정적 사이트입니다. **빌드 도구가 필요 없습니다.**
 
-**▶ [라이브로 보기](https://portfoliomaker-samples.github.io/02-atelier-mono/)**
+## 열기
 
----
+ES 모듈은 `file://`에서 브라우저가 차단합니다. 반드시 서버로 열어야 합니다.
 
-## 이 견본이 쓴 설정
+```bash
+python -m http.server 5500
+```
 
-| | |
-|---|---|
-| 구성 | **여러 페이지** — `index` · `work` · `about` · `contact` 네 개의 HTML |
-| 테마 | 크림 |
-| 글꼴 | Fraunces |
-| 레이아웃 | 좌측 사이드바 (프로필 + 목차가 늘 보이는 형태) |
-| 3D | `wooden_chair.glb` |
-| 효과 | 커서 점 · 도트 웨이브 배경 · 호버 프리뷰 · 자석 버튼 · 스포트라이트 · 글자 스크램블 · 부드러운 스크롤 |
-| 사진 | 10장 |
-| 용량 | 약 4.3 MB |
+→ <http://localhost:5500/index.html>
 
-**한 페이지(퀵메뉴)** 대신 **여러 페이지** 모드를 고르면 이렇게 페이지마다 파일이 따로 나옵니다.
-같은 편집기에서 토글 하나로 바뀝니다.
 
-## 직접 열어서 뜯어보기
+## 페이지
 
-1. [portfoliomaker.site](https://portfoliomaker.site) 접속
-2. 상단 **저장 · 불러오기** 아이콘 클릭
-3. **파일에서 불러오기** → 이 저장소의 `atelier-mono.pbproj` 선택
+- `index.html` — Home
+- `work.html` — Work
+- `about.html` — About
+- `contact.html` — Contact
 
-## Portfolio Maker 는 어떤 도구인가요
+## 구조
 
-- **설치 없음 · 가입 없음** — 브라우저에서 바로 시작합니다
-- **틀 → 내용 → 꾸미기 → 내보내기** 네 단계로 끝납니다
-- 테마 18종, 글꼴 10종, 파트 15종 이상을 조합합니다
-- 3D 모델(`.glb`) 뷰어, 무료 사진 검색, 다크/라이트 토글이 기본 제공됩니다
-- 결과물은 **단일 HTML** 또는 **폴더 ZIP** 으로 내려받습니다 — 이 저장소가 그 ZIP 그대로입니다
-- 만든 프로젝트는 `.pbproj` 로 저장해 두었다가 언제든 다시 불러옵니다
+```
+index.html 등        페이지마다 한 장
+assets/site.css      레이아웃 · 테마 · 파트 스타일
+assets/init.js       3D 효과 마운트
+effects/             효과 팩 (_core · text-scramble · spotlight · scroll-reveal · hover-preview · magnetic-button · model-showcase · dot-grid-wave · tilt-card · smooth-scroll · cursor-dot)
+```
 
-## 다른 견본
+## 고치는 법
 
-같은 도구로 만든 여덟 가지 분야 견본이 [PORTFOLIOMAKER-SAMPLES](https://github.com/PORTFOLIOMAKER-SAMPLES) 에 있습니다.
+- **글·구조** — HTML을 직접 고치세요. 의미 태그(`header`/`nav`/`main`/`section`/`footer`)로 나가 있습니다.
+- **색·폰트** — 각 페이지 `.wf-page`의 인라인 CSS 변수(`--wf-accent` 등)를 바꾸면 전체에 적용됩니다.
+- **3D 효과** — HTML의 `data-fx` / `data-fx-*` 속성이 곧 옵션입니다. 지우면 효과가 사라집니다.
 
----
+## GitHub Pages 배포
 
-<sub>사진: Openverse 무료 이미지 · 3D: Poly Haven (CC0) · 내용은 견본용 가상 스튜디오입니다.</sub>
+리포지터리에 그대로 올리고 Settings → Pages에서 브랜치를 지정하면 됩니다.
+경로 설정이 따로 필요 없습니다(상대 경로만 씁니다).
