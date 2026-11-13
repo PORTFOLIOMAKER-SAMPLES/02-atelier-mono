@@ -48,7 +48,7 @@ button{font:inherit;color:inherit}
 .wf-bar--foot{font-size:.8667em;opacity:.85}
 .wf-foot__mail{opacity:.7}
 .wf-foot__time{font-variant-numeric:tabular-nums;opacity:.7}
-.wf-btn{display:inline-block;padding:11px 24px;background:var(--wf-accent);color:#fff;font-size:.9333em;font-weight:600;border-radius:inherit;text-decoration:none}
+.wf-btn{display:inline-block;padding:11px 24px;background:var(--wf-accent);color:var(--wf-on-accent, #fff);font-size:.9333em;font-weight:600;border-radius:inherit;text-decoration:none}
 .wf-btn--sm{padding:7px 15px;font-size:.8667em}
 .wf-hero{min-width:0;display:flex;flex-direction:column;gap:16px;justify-content:center;flex:1;width:100%;max-width:var(--wf-max);margin:0 auto}
 .wf-hero__title{margin:0;line-height:1.15;white-space:pre-line;letter-spacing:-.02em}
@@ -847,7 +847,7 @@ details.wf-faq__item[open]>.wf-faq__q:after{content:"−"}
 .wf-cmp__pair.is-tall{max-width:640px}
 .wf-cmp__pair.is-tall .wf-cmp__shot{aspect-ratio:3 / 4}
 .wf-cmp__tag{position:absolute;left:10px;top:10px;padding:3px 10px;border-radius:999px;font-size:.8em;color:#fff;background:#475569}
-.wf-cmp__tag.is-after{background:var(--wf-accent, #1e5a61)}
+.wf-cmp__tag.is-after{background:var(--wf-accent, #1e5a61);color:var(--wf-on-accent, #fff)}
 .wf-cmp__row figcaption{display:flex;flex-wrap:wrap;gap:.5em;align-items:baseline}
 .wf-cmp__note{color:var(--wf-muted);font-size:.9em}
 @media (max-width: 760px){.wf-cmp__pair{gap:6px}}
@@ -878,7 +878,7 @@ details.wf-faq__item[open]>.wf-faq__q:after{content:"−"}
 .wf-gal__filter{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 4px}
 .wf-gal__filter[hidden]{display:none}
 .wf-gal__filter>button,.wf-gal__filter>span{display:inline-flex;align-items:center;min-height:40px;padding:0 16px;border:1px solid var(--wf-line, rgba(0,0,0,.2));border-radius:999px;background:transparent;color:inherit;font:inherit;font-size:.92em;cursor:pointer}
-.wf-gal__filter>.is-on{background:var(--wf-accent, #1e5a61);border-color:transparent;color:#fff;font-weight:700}
+.wf-gal__filter>.is-on{background:var(--wf-accent, #1e5a61);border-color:transparent;color:var(--wf-on-accent, #fff);font-weight:700}
 .wf-gal__grid>.is-out{display:none!important}
 .wf-gal__morenote{margin:6px 0 0;font-size:.85em;color:var(--wf-muted);text-align:center}
 .wf-mq{position:relative}
@@ -895,7 +895,7 @@ details.wf-faq__item[open]>.wf-faq__q:after{content:"−"}
 .wf-inq__row input[type=date]{-webkit-appearance:none;-moz-appearance:none;appearance:none;text-align:left}
 .wf-inq__row input[type=date]::-webkit-date-and-time-value{text-align:left}
 .wf-inq__btns{display:flex;flex-wrap:wrap;gap:10px}
-.wf-inq__btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 26px;border-radius:999px;font-weight:700;text-decoration:none;background:var(--wf-accent, #1e5a61);color:#fff}
+.wf-inq__btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 26px;border-radius:999px;font-weight:700;text-decoration:none;background:var(--wf-accent, #1e5a61);color:var(--wf-on-accent, #fff)}
 .wf-inq__btn.is-mail{background:transparent;color:inherit;border:1px solid currentColor}
 .wf-inq__note{margin:0;font-size:.85em;color:var(--wf-muted)}
 .wf-inq__warn{font-size:.9em;color:#9c3a2c}
@@ -904,8 +904,8 @@ details.wf-faq__item[open]>.wf-faq__q:after{content:"−"}
 .wf-inq__lead{font-weight:400;color:var(--wf-muted);font-size:.9em}
 .wf-inq__privacy{margin:0;font-size:.8em;line-height:1.6;color:var(--wf-muted)}
 @media (max-width: 560px){.wf-inq__form{grid-template-columns:1fr}.wf-inq__btn{flex:1 1 100%}}
-.wf-inq a.wf-inq__btn.is-sms,.wf-inq span.wf-inq__btn.is-sms{color:#fff}
-@media (hover: hover) and (pointer: fine){.wf-inq.has-both .wf-inq__btn.is-sms,.wf-inq.has-both .wf-inq__m{display:none}.wf-inq.has-both a.wf-inq__btn.is-mail{background:var(--wf-accent, #1e5a61);color:#fff;border-color:transparent}}
+.wf-inq a.wf-inq__btn.is-sms,.wf-inq span.wf-inq__btn.is-sms{color:var(--wf-on-accent, #fff)}
+@media (hover: hover) and (pointer: fine){.wf-inq.has-both .wf-inq__btn.is-sms,.wf-inq.has-both .wf-inq__m{display:none}.wf-inq.has-both a.wf-inq__btn.is-mail{background:var(--wf-accent, #1e5a61);color:var(--wf-on-accent, #fff);border-color:transparent}}
 .wf-video__frame em.is-warn{color:#f4b4a8;font-weight:600;max-width:34em}
 .wf-btn{box-shadow:0 0 0 2px var(--wf-btn-ring, transparent)}
 .wf-btn{border:0}
@@ -953,6 +953,264 @@ details.wf-faq__item[open]>.wf-faq__q:after{content:"−"}
 body.pb-phone.pb-sheet-open{padding-bottom:60vh}
 
 /* ── 효과 팩 스타일 ── */
+/**
+ * dot-grid-wave / style.css
+ * _core/core.css 를 먼저 불러오세요.
+ */
+
+/* ================================================================== *
+ * 1. 컨테이너 (사용자가 직접 붙이는 클래스)
+ * ================================================================== */
+
+.fx-dots {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  /*
+   * 점 색. JS가 이 변수를 읽습니다.
+   * 지정하지 않으면 요소의 color를 씁니다.
+   */
+  --fx-dot-color: #6b7280;
+}
+
+@media (prefers-color-scheme: dark) {
+  .fx-dots {
+    --fx-dot-color: #9ca3af;
+  }
+}
+
+:root[data-theme='dark'] .fx-dots {
+  --fx-dot-color: #9ca3af;
+}
+:root[data-theme='light'] .fx-dots {
+  --fx-dot-color: #6b7280;
+}
+
+/* ================================================================== *
+ * 2. 캔버스
+ * ================================================================== */
+
+.fx-dot-grid-wave__canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: block;
+  /*
+   * pointer-events를 끄지 않습니다.
+   * 커서 반발을 위해 컨테이너가 pointermove를 받아야 하는데,
+   * 캔버스가 이벤트를 먹어도 버블링으로 컨테이너에 도달합니다.
+   * 다만 캔버스 위 링크 클릭을 막지 않도록 none으로 둡니다.
+   */
+  pointer-events: none;
+
+  opacity: 0;
+  transition: opacity 500ms var(--fx-ease-out);
+}
+
+.fx-dot-grid-wave .fx-dot-grid-wave__canvas {
+  opacity: 1;
+}
+
+/* 콘텐츠는 항상 캔버스 위로.
+   `.fx-layer`(배경 레이어 공용 표식)는 건너뜁니다 — 같은 영역에 함께 걸린
+   다른 팩의 배경까지 콘텐츠로 끌어올리면 서로를 망칩니다. */
+/* 편집 표시(wf__로 시작: 이름표 줄 · 손잡이 · 효과 표식)는 빼야 섹션 테두리에 붙어 있습니다(사용자 확인, 2026-11-13) */
+.fx-dots > *:not(.fx-layer):not([class^="wf__"]) {
+  position: relative;
+  z-index: 1;
+}
+
+/* ================================================================== *
+ * 3. 선택 사항 — 가장자리 페이드
+ *
+ * 격자가 컨테이너 경계에서 뚝 잘리면 "붙여놓은 배경"처럼 보입니다.
+ * 마스크로 가장자리를 흐리면 화면에 녹아든 느낌이 납니다.
+ * ================================================================== */
+
+.fx-dots--fade .fx-dot-grid-wave__canvas {
+  -webkit-mask-image: radial-gradient(
+    ellipse 78% 78% at 50% 50%,
+    #000 45%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    ellipse 78% 78% at 50% 50%,
+    #000 45%,
+    transparent 100%
+  );
+}
+
+/* 위/아래만 페이드 (섹션 구분선처럼 쓸 때) */
+.fx-dots--fade-y .fx-dot-grid-wave__canvas {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #000 22%,
+    #000 78%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #000 22%,
+    #000 78%,
+    transparent 100%
+  );
+}
+
+/* ================================================================== *
+ * 4. 선택 사항 — 섹션 스타터
+ * ================================================================== */
+
+.fx-dots-section {
+  display: grid;
+  place-items: center;
+  min-height: min(62vh, 560px);
+  padding: 56px 24px;
+  border-radius: var(--fx-radius, 16px);
+  background: var(--fx-surface);
+  text-align: center;
+  color: var(--fx-text);
+}
+
+.fx-dots-section h2 {
+  margin: 0 0 12px;
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.fx-dots-section p {
+  margin: 0;
+  max-width: 46ch;
+  color: var(--fx-text-dim);
+  line-height: 1.6;
+}
+
+
+/**
+ * magnetic-button / style.css
+ * _core/core.css 를 먼저 불러오세요.
+ */
+
+/* ================================================================== *
+ * 1. 기능부 (필수)
+ * ================================================================== */
+
+.fx-magnetic-button {
+  position: relative;
+  transform-style: preserve-3d;
+
+  transform:
+    perspective(600px)
+    translate3d(var(--fx-mag-x, 0px), var(--fx-mag-y, 0px), 0)
+    rotateX(var(--fx-mag-rx, 0deg))
+    rotateY(var(--fx-mag-ry, 0deg))
+    scale(var(--fx-mag-scale, 1));
+
+  /* 글로우가 버튼 밖으로 새어나가지 않게 */
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.fx-magnetic-button[data-fx-magnetic='1'] {
+  will-change: transform;
+}
+
+/*
+ * 라벨은 버튼보다 labelFactor 배만큼 "더" 움직입니다.
+ * 이 미세한 어긋남이 버튼에 두께가 있다는 착각을 만듭니다.
+ * labelFactor를 음수로 주면 라벨이 반대로 밀려 유리 안에 갇힌 느낌이 납니다.
+ */
+.fx-magnetic-button [data-fx-label] {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  transform: translate3d(
+    calc(var(--fx-mag-x, 0px) * var(--fx-mag-lf, 0.5)),
+    calc(var(--fx-mag-y, 0px) * var(--fx-mag-lf, 0.5)),
+    0
+  );
+  will-change: transform;
+}
+
+/* 커서를 따라다니는 빛 번짐 */
+.fx-magnetic-button__glow {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  opacity: var(--fx-mag-glow, 0);
+  background: radial-gradient(
+    circle at var(--fx-mag-px, 50%) var(--fx-mag-py, 50%),
+    var(--fx-glare) 0%,
+    transparent 55%
+  );
+}
+
+/* 꺼졌을 때 */
+.fx-magnetic-button.fx-inert [data-fx-label] {
+  transform: none;
+}
+.fx-magnetic-button.fx-inert .fx-magnetic-button__glow {
+  display: none;
+}
+
+/* ================================================================== *
+ * 2. 선택 사항 — 기본 버튼 스킨
+ * ================================================================== */
+
+.fx-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 14px 28px;
+  border: 0;
+  border-radius: 999px;
+
+  font: inherit;
+  font-size: 0.9375rem;
+  font-weight: 650;
+  letter-spacing: -0.005em;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+
+  color: #fff;
+  background: var(--fx-accent);
+  cursor: pointer;
+
+  box-shadow: 0 8px 22px -10px color-mix(in srgb, var(--fx-accent) 80%, #000);
+  transition: box-shadow var(--fx-duration-fast) var(--fx-ease),
+              background-color var(--fx-duration-fast) var(--fx-ease);
+}
+
+.fx-btn[data-fx-magnetic='1'] {
+  box-shadow: 0 16px 34px -12px color-mix(in srgb, var(--fx-accent) 85%, #000);
+}
+
+.fx-btn:active {
+  /* 누를 때는 자석 이동 위에 살짝 눌리는 느낌만 얹습니다 */
+  filter: brightness(0.94);
+}
+
+/* 보조 스타일(외곽선) */
+.fx-btn--ghost {
+  color: var(--fx-text);
+  background: transparent;
+  box-shadow: inset 0 0 0 1px var(--fx-border);
+}
+
+.fx-btn--ghost[data-fx-magnetic='1'] {
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--fx-accent) 60%, transparent),
+              0 14px 30px -16px rgba(0, 0, 0, 0.5);
+}
+
+
 /**
  * model-showcase / style.css
  * _core/core.css 를 먼저 불러오세요.
