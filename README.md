@@ -1,6 +1,6 @@
 # Atelier Mono 포트폴리오
 
-Portfolio Maker로 만든 정적 사이트입니다. **빌드 도구가 필요 없습니다.**
+포메(Portfolio Maker)로 만든 정적 사이트입니다. **빌드 도구가 필요 없습니다.**
 
 ## 열기
 
